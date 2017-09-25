@@ -22,7 +22,7 @@ public class EncodingFilter  implements Filter{
 	
 	/**
 	 * 测试在整个web中,统一字符编码过滤器
-	 * 编写jsp 输入用户名，在Servlet中获取用户名，将用户名输出到浏览器上
+	 * 编写jsp 输入用户名，在Servlet中获取用户名，将用户名输出到端口控制台上
 	 */
 	
 	//定义一个私有的属性encode
