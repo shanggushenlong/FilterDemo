@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author wcq
  *
  */
-
+   
 //首先实现filter过滤功能,实现Filter接口,重写相关的方法
 public class EncodingFilter  implements Filter{
 	

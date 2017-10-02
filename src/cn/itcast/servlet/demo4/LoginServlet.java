@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
        
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		 
 		//1.首先得到请求的用户信息
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");

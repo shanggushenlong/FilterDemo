@@ -13,7 +13,7 @@ public class ServletDemo1 extends HttpServlet {
        
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		 
 		//一般对于form表单的提交,如果是post请求,通过设置 
 		// request.setCharacterEncoding("utf-8");
 		//现在通过filter过滤,设置编码

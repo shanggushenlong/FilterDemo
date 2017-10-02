@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+	 
 	<%--编写登录页面 --%>
 	${ requestScope["login.message"] }
 	<form action="${pageContext.request.contextPath}/LoginServlet" method="post">
