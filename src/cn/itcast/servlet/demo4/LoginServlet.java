@@ -1,6 +1,7 @@
 package cn.itcast.servlet.demo4;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -20,6 +21,9 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 
+		//设置编码
+		request.setCharacterEncoding("utf-8");
+		
 		//1.首先得到请求的用户信息
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
@@ -34,10 +38,11 @@ public class LoginServlet extends HttpServlet {
 				String autologin = request.getParameter("autologin");
 				if("ok".equals(autologin)){
 					//如果相等,表明勾选了,将其存取到cookie中
-					Cookie cookie = new Cookie("autologin", username+"::"+password);
+						//解决中文登录的问题:先使用utf-8编码,在使用utf-8解码
+					Cookie cookie = new Cookie("autologin", URLEncoder.encode(username, "utf-8")+"::"+password);
 					cookie.setMaxAge(60*60*24*10);   //设置cookie的生存时间
 					cookie.setPath("/");
-					response.addCookie(cookie);   //在相应中添加cookie对象
+					response.addCookie(cookie);   //在响应中添加cookie对象
 				}
 				
 				//登录成功,就将其存储到cookie中,页面重定向到success.jsp页面中
