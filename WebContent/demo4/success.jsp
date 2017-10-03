@@ -8,6 +8,11 @@
 </head>
 <body>
 	
-	${ user.username }登录成功
+	${ user.username }登录成功<br>
+	<a href="${ pageContext.request.contextPath }/book_add">book add</a><br>
+	<a href="${ pageContext.request.contextPath }/book_delete">book delete</a><br>
+	<a href="${ pageContext.request.contextPath }/book_update">book update</a><br>
+	<a href="${ pageContext.request.contextPath }/book_search">book search</a><br>
+	
 </body>
 </html> 
